@@ -1,107 +1,77 @@
 # 🌧️ Smart Rainfall Prediction System
 
-A Smart Weather Forecasting and Rainfall Prediction Web Application using Machine Learning and Live Weather Data.
+An intelligent weather forecasting web application that combines Machine Learning with weather data to help users understand upcoming rainfall conditions.
 
-## 1. 🎯 Aim
+<p align="center">
 
-To develop a smart rainfall prediction system that uses machine learning techniques and live weather data to provide rainfall-related forecasts through a user-friendly web application.
+**🌐 Live Demo:** [Smart Rainfall Prediction System](https://rainfall-prediction-pzwd.onrender.com/)
 
-## 2. 📌 Project Overview
+</p>
 
-The Smart Rainfall Prediction System is a web-based application designed to provide weather forecast information and rainfall-related predictions.
+## 📌 Project Overview
 
-The project integrates a FastAPI backend with the Open-Meteo weather API and a frontend developed using HTML, CSS, and JavaScript. It also includes a saved machine learning model and its feature configuration.
+The **Smart Rainfall Prediction System** is a web-based project designed to provide rainfall-related forecasts using weather information and a trained Machine Learning model.
 
-The system aims to make weather information accessible and useful for applications such as agricultural planning, weather monitoring, and environmental analysis.
+The application uses a web interface to present weather information in an accessible format. It aims to demonstrate how Machine Learning, weather APIs, and web development can work together to support weather awareness and planning.
 
-## 3. 🎯 Objectives
+## 🎯 Objectives
 
-- To obtain weather forecast data from a weather API.
-- To process weather-related information for rainfall analysis.
-- To integrate a saved machine learning model into the prediction workflow.
-- To develop a user-friendly web interface.
-- To connect the frontend with the backend through API requests.
-- To organize the project into reusable and maintainable components.
+- Develop a user-friendly rainfall prediction web application.
+- Integrate weather data with a Machine Learning model.
+- Process weather information to generate rainfall-related predictions.
+- Display weather information through an interactive dashboard.
+- Explore the use of AI and Machine Learning in weather forecasting.
 
-## 4. ❗ Problem Statement
+## ✨ Key Features
 
-Rainfall information is important for agriculture, water management, and daily planning. However, users may find it difficult to access weather information through technical tools or interpret weather data efficiently.
+- **Weather Forecasting:** Access weather information for forecasting purposes.
+- **Machine Learning Integration:** Uses a trained model for rainfall-related prediction.
+- **Interactive Dashboard:** Presents information through a web-based interface.
+- **Weather Data Integration:** Connects with the Open-Meteo weather service.
+- **Web-Based Access:** The deployed application can be accessed through a browser.
+- **Modular Structure:** Separates the frontend, backend, model files, and supporting resources.
 
-The project addresses this problem by providing a web-based interface that connects to weather data services and supports rainfall-related forecasting through a backend application and a machine learning model.
-
-## 5. 💡 Proposed Solution
-
-The proposed system combines live weather data, backend processing, a web interface, and a saved machine learning model.
-
-### 🔄 Proposed Solution Flowchart
-
-```mermaid
-flowchart TD
-    A[User Opens Website] --> B[Enter or Select Location]
-    B --> C[Frontend Sends API Request]
-    C --> D[FastAPI Backend]
-    D --> E[Fetch Weather Data from Open-Meteo]
-    E --> F[Prepare Weather Features]
-    F --> G[Rainfall Prediction Model]
-    G --> H[Process Prediction Results]
-    H --> I[Display Forecast on Website]
-```
-
-## 6. ✨ Key Features
-
-- Live weather forecast integration.
-- FastAPI-based backend.
-- Web-based user interface.
-- Saved machine learning model.
-- Organized frontend, backend, data, and model directories.
-- Jupyter notebooks for experimentation and analysis.
-- Modular project structure for future improvements.
-
-## 7. 🏗️ System Architecture
-
-The system is organized into the following components:
-
-**1. Presentation Layer — Frontend**
-- `index.html` provides the website structure.
-- `style.css` defines the design and layout.
-- `script.js` handles user interactions and API communication.
-
-**2. Application Layer — Backend**
-- `backend/main.py` contains the FastAPI application.
-- `backend/test_pipeline.py` contains pipeline-related tests.
-
-**3. Weather Data Layer**
-- The Open-Meteo API provides weather forecast information.
-
-**4. Machine Learning Layer**
-- `model/rainfall_model.joblib` stores the saved model.
-- `model/feature_config.joblib` stores the associated feature configuration.
-
-**5. Supporting Layer**
-- `data/` contains project data.
-- `notebooks/` contains Jupyter notebooks.
-- `reports/` contains project reports.
-
-## 8. 🛠️ Technology Stack
+## 🛠️ Technology Stack
 
 | Technology | Purpose |
 |---|---|
-| Python | Backend programming |
-| FastAPI | API development |
-| Open-Meteo API | Weather forecast data |
+| Python | Backend development and ML integration |
+| FastAPI | Backend API framework |
 | HTML | Webpage structure |
-| CSS | Website styling |
+| CSS | Dashboard styling |
 | JavaScript | Frontend interactions |
-| Joblib | Saving and loading model-related objects |
-| Jupyter Notebook | Data analysis and experimentation |
-| GitHub | Source code hosting and version control |
+| Scikit-learn | Machine Learning tools |
+| Joblib | Saving and loading model files |
+| Open-Meteo API | Weather data integration |
+| Render | Application deployment |
+| Git & GitHub | Version control and project hosting |
 
-Pandas, NumPy, and Scikit-learn may also be used if included in the actual implementation.
+## 🏗️ System Architecture
 
-## 9. 📂 Project Structure
+The system follows a modular architecture:
+
+1. **Weather Data:** Weather information is retrieved from the weather data service.
+2. **Backend Processing:** The Python backend processes requests and manages application logic.
+3. **Machine Learning Model:** The saved model is used for prediction where required by the application.
+4. **Frontend Dashboard:** HTML, CSS, and JavaScript present the available information to the user.
+5. **Deployment:** Render hosts the web application for online access.
+
+```mermaid
+flowchart TD
+    A[User] --> B[Web Dashboard]
+    B --> C[FastAPI Backend]
+    C --> D[Open-Meteo Weather API]
+    C --> E[Trained ML Model]
+    D --> F[Weather Data Processing]
+    E --> G[Rainfall Prediction]
+    F --> G
+    G --> H[Results on Dashboard]
+```
+
+## 📁 Project Structure
 
 ```text
-Smart-Rainfall-Prediction-System/
+Rainfall-Prediction/
 │
 ├── backend/
 │   ├── main.py
@@ -115,128 +85,126 @@ Smart-Rainfall-Prediction-System/
 │   └── script.js
 │
 ├── model/
-│   ├── rainfall_model.joblib
-│   └── feature_config.joblib
+│   ├── feature_config.joblib
+│   └── rainfall_model.joblib
 │
 ├── notebooks/
 ├── reports/
-│
 ├── README.md
 ├── requirements.txt
 └── requirements-notebooks.txt
 ```
 
-## 10. 📊 Results
+## 🚀 Live Application
 
-The project combines a web interface, a FastAPI backend, live weather data access, and saved machine learning model files.
+Try the deployed application here:
 
-The application is intended to present forecast information and rainfall-related predictions. Actual prediction quality depends on the trained model, input features, and testing results.
+**[Open Smart Rainfall Prediction System](https://rainfall-prediction-pzwd.onrender.com/)**
 
-Quantitative performance metrics should be added after evaluating the model on suitable test data.
+The application is hosted on Render and can be opened in a compatible web browser. Availability may depend on the hosting service.
 
-## 11. 🖥️ Project Demonstration
-
-The project demonstration can include the following steps:
-
-1. Open the rainfall prediction website.
-2. Select or enter a location, if supported.
-3. Request the available weather forecast.
-4. Observe the frontend's interaction with the backend.
-5. View the forecast or prediction output.
-6. Demonstrate the API endpoints using FastAPI's interactive documentation at `/docs`.
-
-**Screenshots to add:**
-- Homepage of the application.
-- Weather input or location selection.
-- Forecast or prediction output.
-- FastAPI API documentation.
-- Model evaluation results, if available.
-
-## 12. 🚀 Setup and Installation
+## 💻 Run the Project Locally
 
 ### Prerequisites
 
-- Python installed on your system.
-- Internet connection for live weather data.
-- A web browser.
+Install the following before starting:
+
+- Python 3.10 or another version compatible with the project dependencies
+- Visual Studio Code (recommended)
+- Git (optional, for cloning the repository)
 
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/manjot-15058/Rainfall-Prediction-System.git
-cd Rainfall-Prediction-System
+git clone https://github.com/manjot15058-ux/Rainfall-Prediction.git
+cd Rainfall-Prediction
 ```
 
-### Step 2: Install Dependencies
+If your repository contains an additional inner `Rainfall-Prediction` folder, open the folder that contains `backend`, `frontend`, `model`, and `requirements.txt`.
+
+### Step 2: Create a Virtual Environment
 
 ```bash
-pip install -r requirements.txt
+python -m venv .venv
 ```
 
-For notebook-related dependencies, run:
+Activate it on Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+### Step 3: Install Dependencies
 
 ```bash
-pip install -r requirements-notebooks.txt
+python -m pip install -r requirements.txt
 ```
 
-### Step 3: Start the Backend
-
-From the project root, try:
+### Step 4: Start the Backend
 
 ```bash
 uvicorn backend.main:app --reload
 ```
 
-If that import path does not work, open the `backend` folder and run:
+### Step 5: Open the Application
 
-```bash
-uvicorn main:app --reload
-```
+Open the API documentation to check whether the backend is running:
 
-### Step 4: Open the API Documentation
+[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
-Visit the following address in your browser after starting the backend:
+If your backend serves the frontend dashboard, open:
 
-http://127.0.0.1:8000/docs
+[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
 
-### Step 5: Open the Frontend
+Keep the backend terminal running while using the local application.
 
-Open `frontend/index.html` in a browser if the frontend is a standalone static website. If the project requires a local server or additional configuration, follow the actual frontend setup.
+## 🌍 Applications
 
-## 13. 🔮 Future Scope
+- Agricultural planning and weather awareness
+- Everyday outdoor activity planning
+- Educational demonstrations of Machine Learning
+- Weather data analysis
+- Academic projects involving AI and web development
 
-- Improve prediction accuracy through model evaluation and tuning.
-- Integrate additional weather features.
-- Add interactive weather charts and visualizations.
-- Improve location search and user experience.
-- Add historical rainfall analysis.
-- Deploy the application online.
-- Extend the system for agricultural and water resource planning.
+*This project is an educational forecasting application and should not replace official weather warnings or emergency guidance.*
 
-## 14. 👩‍💻 Developed By
+## 🔮 Future Scope
 
-**Project Name:** Smart Rainfall Prediction System
+- Improve model performance through further training and evaluation.
+- Add historical weather visualizations.
+- Expand forecast information and location support.
+- Improve mobile responsiveness and accessibility.
+- Add more detailed prediction reports.
+- Integrate additional verified weather data sources.
 
-**Team Members:**
-- Bavneet Kaur
-- Ritika
-- Manjot Kaur
+## 👩‍💻 Project Team
 
-**Department:** Artificial Intelligence and Data Science  
-**University:** CT University
+Developed as an academic project by:
 
-## 15. 🎓 Project Outcome
+- **Manjot Kaur**
+- **Bavneet Kaur**
+- **Ritika**
 
-The project provides a foundation for a web-based rainfall forecasting application by combining a frontend interface, a FastAPI backend, live weather data access, and saved machine learning model files.
+**Programme:** B.Tech – Artificial Intelligence and Data Science  
+**Institution:** CT University
 
-It demonstrates the practical integration of web development, API communication, and machine learning components in an academic project.
+## 🎓 Project Outcome
 
-## 16. ✅ Conclusion
+This project demonstrates the integration of a Python backend, weather data services, a Machine Learning model, and a web dashboard into a single application. It provides practical experience in AI/ML integration, API development, frontend development, and cloud deployment.
 
-The Smart Rainfall Prediction System demonstrates how weather data services, machine learning components, and web technologies can be combined in one application.
+## 🤝 Contributions
 
-The project provides a foundation for accessible weather forecasting and rainfall-related analysis. Further model evaluation, testing, and deployment can improve its reliability and usefulness.
+Suggestions and improvements are welcome. You can fork the repository, create a separate branch, and submit a pull request with your proposed changes.
+
+## 📄 License
+
+No license has been specified yet. Add an appropriate open-source license if you intend to permit others to reuse or modify the project.
 
 ---
 
-**⭐ Developed for academic and educational purposes.**
+<p align="center">
+
+**🌧️ Smart Rainfall Prediction System**  
+*Using Machine Learning and Weather Data for Smarter Forecasting.*
+
+</p>
